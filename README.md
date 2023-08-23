@@ -14,3 +14,18 @@ enum Direction {
   West = 'West'
 }
 ```
+
+Enumerated objects are a little bit like classes, in that there's a difference between creating the enumerated object and a constant that might share the same name, see below:
+
+```typescript
+enum Direction {
+  North = 'North',
+  South = 'South',
+  East = 'East',
+  West = 'West'
+}
+
+const direction: Direction = Direction.North
+```
+
+We're creating a variable that is only allowed to accept values from the enum that created hence the ": Direction" portion of the code.
